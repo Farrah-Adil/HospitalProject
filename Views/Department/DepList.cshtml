@@ -1,0 +1,95 @@
+﻿@model IEnumerable<HospitalProject.Models.DepartmentEntity>
+
+@{
+    ViewData["Title"] = "DepartmentList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DepList</h1>
+
+    <hr />
+
+    <p class="float-left">
+        <a asp-action="AddDepartment" asp-controller="Department" class="btn btn-outline-secondary">Add Department</a>
+    </p>
+
+    <p class="float-right">
+        @* <a asp-action="AddCustomer" asp-controller="Item" class="btn btn-outline-secondary">Add School</a> |*@
+        @*<a asp-action="List" class="btn btn-outline-primary">Item List</a> |
+    <a asp-action="SchoolList" asp-controller="Item" class="btn btn-outline-primary">Category List</a>*@
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.DepName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DepHead)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.DepPhone)
+                </th>
+
+                <th>
+                    @Html.DisplayNameFor(model => model.DepEmail)
+                </th>
+               @* <th>
+                    @Html.DisplayNameFor(model => model.HosId)
+                </th>*@
+
+            <th>
+                @Html.DisplayNameFor(model => model.HosName)
+            </th>
+               
+
+
+
+                <th>Actions</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                   
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepHead)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepPhone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DepEmail)
+                    </td>
+
+          @*      <td>
+                    @Html.DisplayFor(modelItem => item.HosId)
+                </td>*@
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.HosName)
+                </td>
+
+                    
+
+
+
+
+
+                    <td>
+                        @Html.ActionLink("Update", "AddDepartment", new {item.DepId, item .DepName,item.DepHead, item.DepPhone,item.DepEmail,item.HosId } , new { @class="btn btn-outline-success rounded-pill"}) |
+                        @Html.ActionLink("Delete", "DeleteDepartment", new {  item.DepId  }, new { @class = "btn btn-outline-danger rounded-pill",onclick="return confirm('Do you really want this record?')" })
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>

@@ -1,0 +1,101 @@
+﻿@model HospitalProject.Models.LabEntity
+
+@{
+    ViewData["Title"] = "AddLab";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddLab</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveLab">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="LabId" />
+                @*<input type="hidden" asp-for="PtId" />*@
+                <label asp-for="LabName" class="control-label"></label>
+                <input asp-for="LabName" class="form-control" />
+                <span asp-validation-for="LabName" class="text-danger"></span>
+            </div>
+            @*
+            <div>
+            <label asp-for="StId" class="control-label"></label>
+            <select asp-for="StId" class="form-control">
+            @*asp-items="@(new SelectList(ViewBag.DepList,"ID","Department"))">*
+            </select>
+            </div>*@
+
+            <div class="form-group">
+                <label asp-for="LabAdd" class="control-label"></label>
+                <input asp-for="LabAdd" class="form-control" />
+                <span asp-validation-for="LabAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LabPhone" class="control-label"></label>
+                <input asp-for="LabPhone" class="form-control" />
+                <span asp-validation-for="LabPhone" class="text-danger"></span>
+            </div>
+
+
+
+
+
+
+            <div class="form-group">
+                <label asp-for="LabEmail" class="control-label"></label>
+                <input asp-for="LabEmail" class="form-control" />
+                <span asp-validation-for="LabEmail" class="text-danger"></span>
+            </div>
+
+
+
+
+            @*<div class="form-group">
+
+            <label asp-for="DepId" class="control-label"></label>
+            <input asp-for="DepId" class="form-control" />
+            <span asp-validation-for="DepId" class="text-danger"></span>
+            </div>**@
+
+            @* <div class="form-group">
+            <label class="col-xs-3 control-label">HosId</label>
+            <div class="col-xs-5 selectContainer">
+
+            <select class="form-control" name="HosId" runat="server" id="Combobox">
+            <option value="">Choose a HospitalId</option>
+            <option value="">1 </option>
+            <option value="">2 </option>
+            <option value="">3 </option>
+            <option value="">4 </option>
+            </select>
+            </div>
+            </div>
+            *@
+
+
+            @* <div class="form-group">
+            <label class="col-xs-3 control-label">DepId</label>
+            <div class="col-xs-5 selectContainer">
+
+            <select class="form-control" name="DepId" runat="server" id="Combobox">
+            <option value="">Choose a DepartmentId</option>
+            <option value="">1 </option>
+            <option value="">2 </option>
+            <option value="">3 </option>
+            <option value="">4 </option>
+            </select>
+            </div>
+            </div>*@
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Lab" class="btn btn-outline-success">Lab List</a>
+            </div>
+        </form>
+
+    </div>
+</div> 

@@ -1,0 +1,80 @@
+﻿@model HospitalProject.Models.DepartmentEntity
+
+@{
+    ViewData["Title"] = "AddDepartment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddDepartment</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SaveDepartment">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="DepId" />
+               
+                <label asp-for="DepName" class="control-label"></label>
+                <input asp-for="DepName" class="form-control" />
+                <span asp-validation-for="DepName" class="text-danger"></span>
+            </div>
+           
+
+            <div class="form-group">
+                <label asp-for="DepHead" class="control-label"></label>
+                <input asp-for="DepHead" class="form-control" />
+                <span asp-validation-for="DepHead" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepPhone" class="control-label"></label>
+                <input asp-for="DepPhone" class="form-control" />
+                <span asp-validation-for="DepPhone" class="text-danger"></span>
+            </div>
+
+
+
+
+
+
+            <div class="form-group">
+                <label asp-for="DepEmail" class="control-label"></label>
+                <input asp-for="DepEmail" class="form-control" />
+                <span asp-validation-for="DepEmail" class="text-danger"></span>
+            </div>
+
+
+
+
+           @* <div class="form-group">
+                <label asp-for="HosId" class="control-label"></label>
+                <input asp-for="HosId" class="form-control" />
+                <span asp-validation-for="HosId" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+            <label asp-for="HosId" class="control-label"></label>
+            <select asp-for="HosId" class="form-control" asp-items="@(new SelectList(ViewBag.HospitalList,"HospitalId","Name"))">
+            </select>
+
+    </div>
+           
+
+
+           @* <div class="form-group">
+
+            <label asp-for="DepId" class="control-label"></label>
+            <input asp-for="DepId" class="form-control" />
+            <span asp-validation-for="DepId" class="text-danger"></span>
+            </div>*
+*@
+            
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="DepList" class="btn btn-outline-success">Department List</a>
+            </div>
+        </form>
+
+    </div>
+</div> 

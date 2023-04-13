@@ -1,0 +1,82 @@
+﻿@model IEnumerable<HospitalProject.Models.LabEntity>
+@{
+    ViewData["Title"] = "LabList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>LabList</h1>
+
+<hr />
+
+<p class="float-left">
+    <a asp-action="AddLab" asp-controller="lab" class="btn btn-outline-secondary">Add Lab</a>
+</p>
+
+<p class="float-right">
+    @* <a asp-action="AddCustomer" asp-controller="Item" class="btn btn-outline-secondary">Add School</a> |*@
+    @*<a asp-action="List" class="btn btn-outline-primary">Item List</a> |
+    <a asp-action="SchoolList" asp-controller="Item" class="btn btn-outline-primary">Category List</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.LabName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LabAdd)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.LabPhone)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.LabEmail)
+            </th>
+            
+
+
+
+
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LabId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LabName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LabAdd)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.LabPhone)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LabEmail)
+                </td>
+
+                
+
+
+
+
+
+                <td>
+                    @Html.ActionLink("Update", "AddLab", new {item.LabId, item .LabName,item.LabAdd, item.LabPhone,item.LabEmail} , new { @class="btn btn-outline-success rounded-pill"}) |
+                    @Html.ActionLink("Delete", "DeleteLab", new {  item.LabId  }, new { @class = "btn btn-outline-danger rounded-pill",onclick="return confirm('Do you really want this record?')" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

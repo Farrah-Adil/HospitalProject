@@ -1,0 +1,88 @@
+﻿@model IEnumerable<HospitalProject.Models.DrEntity>
+
+@{
+    ViewData["Title"] = "DrList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>DrList</h1>
+<hr />
+
+<p class="float-left">
+    <a asp-action="AddDoctor" asp-controller="Dr" class="btn btn-outline-secondary">Add Doctor</a>
+</p>
+
+<p class="float-right">
+    @* <a asp-action="AddCustomer" asp-controller="Item" class="btn btn-outline-secondary">Add School</a> |*@
+    @*<a asp-action="List" class="btn btn-outline-primary">Item List</a> |
+    <a asp-action="SchoolList" asp-controller="Item" class="btn btn-outline-primary">Category List</a>*@
+</p>
+<table class="table">
+    <thead>
+        <tr>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DrName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DrSpecialty)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DrLicencesNo)
+            </th>
+
+            
+            <th>
+                @Html.DisplayNameFor(model => model.HosId)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.DepId)
+            </th>
+
+
+
+
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+               
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrSpecialty)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DrLicencesNo)
+                </td>
+                
+                <td>
+                    @Html.DisplayFor(modelItem => item.HosId)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.DepId)
+                </td>
+
+
+
+
+
+                <td>
+                    @Html.ActionLink("Update", "AddDoctor", new {item.DrId, item .DrName,item.DrSpecialty, item.DrLicencesNo,item.HosId,item.DepId } , new { @class="btn btn-outline-success rounded-pill"}) |
+                    @Html.ActionLink("Delete", "DeleteDoctor", new {  item.DrId  }, new { @class = "btn btn-outline-danger rounded-pill",onclick="return confirm('Do you really want this record?')" })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

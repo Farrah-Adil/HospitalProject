@@ -1,0 +1,100 @@
+﻿@model HospitalProject.Models.PharmacyEntity
+
+@{
+    ViewData["Title"] = "AddPharmacy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>AddPharmacy</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="SavePharmacy">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <input type="hidden" asp-for="PharmacyId" />
+                @*<input type="hidden" asp-for="PtId" />*@
+                <label asp-for="PharName" class="control-label"></label>
+                <input asp-for="PharName" class="form-control" />
+                <span asp-validation-for="PharName" class="text-danger"></span>
+            </div>
+            @*
+            <div>
+            <label asp-for="StId" class="control-label"></label>
+            <select asp-for="StId" class="form-control">
+            @*asp-items="@(new SelectList(ViewBag.DepList,"ID","Department"))">*
+            </select>
+            </div>*@
+
+            <div class="form-group">
+                <label asp-for="PharAdd" class="control-label"></label>
+                <input asp-for="PharAdd" class="form-control" />
+                <span asp-validation-for="PharAdd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PharPhone" class="control-label"></label>
+                <input asp-for="PharPhone" class="form-control" />
+                <span asp-validation-for="PharPhone" class="text-danger"></span>
+            </div>
+
+
+
+
+
+
+            <div class="form-group">
+                <label asp-for="PharEmail" class="control-label"></label>
+                <input asp-for="PharEmail" class="form-control" />
+                <span asp-validation-for="PharEmail" class="text-danger"></span>
+            </div>
+
+
+
+
+            @*<div class="form-group">
+
+            <label asp-for="DepId" class="control-label"></label>
+            <input asp-for="DepId" class="form-control" />
+            <span asp-validation-for="DepId" class="text-danger"></span>
+            </div>**@
+
+            @* <div class="form-group">
+            <label class="col-xs-3 control-label">HosId</label>
+            <div class="col-xs-5 selectContainer">
+
+            <select class="form-control" name="HosId" runat="server" id="Combobox">
+            <option value="">Choose a HospitalId</option>
+            <option value="">1 </option>
+            <option value="">2 </option>
+            <option value="">3 </option>
+            <option value="">4 </option>
+            </select>
+            </div>
+            </div>
+            *@
+
+
+            @* <div class="form-group">
+            <label class="col-xs-3 control-label">DepId</label>
+            <div class="col-xs-5 selectContainer">
+
+            <select class="form-control" name="DepId" runat="server" id="Combobox">
+            <option value="">Choose a DepartmentId</option>
+            <option value="">1 </option>
+            <option value="">2 </option>
+            <option value="">3 </option>
+            <option value="">4 </option>
+            </select>
+            </div>
+            </div>*@
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+                <a asp-action="Pharmacy" class="btn btn-outline-success">Pharmacy List</a>
+            </div>
+        </form>
+
+    </div>
+</div> 
