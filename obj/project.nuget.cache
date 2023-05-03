@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zPLjXlnx8W2ymca7dQJICjUg+mgS4MBweACDKTAPiTUcFD6o+wNIfGSXqwjd1JaohI+XCCHyjwtpQsXgzIEXHw==",
+  "dgSpecHash": "QbLMSZHY45fVR31wTFzL8oBZFK3tM4Rrll03Nm8vL8M8oDvThwG/IOOQCPBq4nhX9YHaBAWCgOgMMt+zBOiB7Q==",
   "success": true,
-  "projectFilePath": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject.csproj",
+  "projectFilePath": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject\\HospitalProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\fadil\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\fadil\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

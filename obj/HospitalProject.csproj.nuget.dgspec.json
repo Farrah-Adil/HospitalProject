@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject.csproj": {}
+    "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject\\HospitalProject.csproj": {}
   },
   "projects": {
-    "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject.csproj": {
+    "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject\\HospitalProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject.csproj",
+        "projectUniqueName": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject\\HospitalProject.csproj",
         "projectName": "HospitalProject",
-        "projectPath": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject.csproj",
+        "projectPath": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject\\HospitalProject.csproj",
         "packagesPath": "C:\\Users\\fadil\\.nuget\\packages\\",
-        "outputPath": "C:\\Development\\ASP.NET MVC\\HospitalProject\\obj\\",
+        "outputPath": "C:\\Development\\ASP.NET MVC\\HospitalProject\\HospitalProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\fadil\\AppData\\Roaming\\NuGet\\NuGet.Config",
